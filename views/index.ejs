@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<title>homePage</title>
+<style type="text/css">
+	.container{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.fixed-header{
+		width: 100%;
+		position: fixed;
+		background: #333;
+		padding: 10px 0;
+		color: #fff;
+	}
+	.fixed-header{
+		top: 0;
+	}
+	nav a{
+		color: #fff;
+		text-decoration: none;
+		padding: 7px 25px;
+		display: inline-block;
+	}
+</style>
+</head>
+<body>
+   
+	<div class="d-flex flex-column align-items-center mt-3">
+		<% data.forEach(post =>{%>
+ 		    <div class="card mb-1" style="width: 80%">
+	   		<div class="card-body">
+	   			<div class="media border p-3" style="width: 15%">
+	   				<img src="public/user.png" class="mr-3 mt-3 rounded-circle" style="width: 60px">
+	   			</div>
+	   			<div class="media-body">
+	   				<h5><%= post.author.username%><small><i> Posted On <%= post.updateAt%></i></small></h5>
+	   			</div>
+		      <h3 class="card-title"> <%= post.title %></h3>
+	          <p class="card-text"> <%= post.description %> </p>
+	          <a href="#" class="btn btn-primary">comment</a>
+       </div>
+     </div>
+	<%})%>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

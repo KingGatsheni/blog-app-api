@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+  body{
+background: #36454F;
+margin: 0;
+padding:0;
+font-family: "Montserrat",sans-serif;
+}
+.container{
+    width: 360px;
+    height: 600px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+.container h1{
+font-size: 25px;
+margin-top: 15px;
+margin-bottom: 15px;
+color: red;
+}
+.img_logo{
+    border-radius: 50%;
+    margin-top: 125px;
+}
+.input-container{
+    width: 260px;
+    height: 40px;
+    background: #f1f1f1b3;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.input-container input{
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 90%;
+    line-height: 37px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+.btn{
+    width: 260px;
+    height: 40px;
+    background: #3498db;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.b1{
+    display: block;
+    width: 260px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin: auto;
+    transition: 0.4s all;
+}
+.b2{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.4s all;
+    color: #3498db;
+}
+a:hover{
+    background: #00000040;
+}
+</style>
+</head>
+<body>
+	
+    <div class ='container'>
+        <h1>Sign In</h1>
+        <form action='/apiLogin' method ='POST'>
+          <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input type="text" name="username" placeholder="Username" required>
+          </div> 
+          <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input type="password" name="_pass" placeholder="Password" required>
+          </div> 
+            <input class="btn" type="submit" value ="Sign in">
+         
+        </form>
+        
+         <a class="b1" href="/register">Sign Up ?</a>
+         <h4> </h4>
+    </div>
+   
+</body>
+</html>
